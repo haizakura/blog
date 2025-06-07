@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@giscus/vue": "^3.1.1",
     "dayjs": "^1.11.13",
     "vitepress": "^1.6.3",
     "vue": "^3.5.16"
