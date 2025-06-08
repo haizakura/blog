@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "灰桜 | 札記",
   description: "灰桜 | 札記 - Powered by VitePress",
+  lang: 'zh-CN',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -23,7 +24,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/HAIZAKURA' }
     ]
   }
 })
