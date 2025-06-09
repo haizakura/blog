@@ -6,6 +6,7 @@ export default defineConfig({
   description: "灰桜 | 札記 - Powered by VitePress",
   lang: 'zh-CN',
   head: [
+    // inject Vercel Speed Insights
     [
       'script',
       {},
