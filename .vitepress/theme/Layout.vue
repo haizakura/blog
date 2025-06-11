@@ -1,7 +1,21 @@
 <template>
   <Layout>
+    <template #doc-before v-if="currentPost">
+      <div class="vp-doc">
+        <h1>{{ currentPost.title }}</h1>
+        <p class="mt-2 space-x-2">
+          <Badge type="tip">{{ new Date(currentPost.create).toISOString().split('T')[0] }}</Badge>
+          <Badge type="info" v-for="tag in currentPost.tags" :key="tag">{{ tag }}</Badge>
+        </p>
+      </div>
+    </template>
+
+    <template #doc-footer-before v-if="currentPost">
+      <LicensingBlock />
+    </template>
+
     <template #doc-after v-if="page.frontmatter.comment ?? true">
-      <div>
+      <div class="VPDoc vp-doc">
         <h2 id="giscus">评论</h2>
       </div>
       <Giscus
@@ -11,18 +25,44 @@
         :theme="isDark ? 'transparent_dark' : 'light'"
       />
     </template>
- </Layout>
+  </Layout>
 </template>
 
-<script setup lang="ts"> 
-import { ref, nextTick, watch, onMounted, computed } from 'vue';
+<script setup lang="ts">
+import { ref, watch } from 'vue';
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
-import Giscus from '@giscus/vue'
+import Giscus from '@giscus/vue';
 
-// import { data as posts } from '../posts.data';
-import type { ThemeConfig } from '.';
+import { data as posts } from '../posts.data';
+import type { Post, ThemeConfig } from '.';
+import LicensingBlock from '@/components/LicensingBlock.vue';
 
 const { Layout } = DefaultTheme;
-const { page, theme, frontmatter, isDark } = useData<ThemeConfig>();
+const { page, theme, isDark } = useData<ThemeConfig>();
+
+// Current post
+const currentPost = ref<Post | undefined>(undefined);
+watch(
+  () => page.value.relativePath,
+  (newPath) => {
+    // Find current post
+    const postId = newPath.match(/posts\/(.*)\//)?.[1];
+    currentPost.value = postId ? posts.find((post) => post.id === postId) : undefined;
+  },
+  { immediate: true }
+);
 </script>
+
+<style lang="scss">
+.post-header {
+  margin-bottom: 64px;
+}
+
+.post-title {
+  font-weight: 600;
+  outline: none;
+  line-height: 40px;
+  font-size: 32px;
+}
+</style>
