@@ -1,22 +1,36 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue';
 import { DefaultTheme as DefaultThemeType, Theme, ContentData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import { GiscusProps } from '@giscus/vue';
-import './style.css';
+import Layout from './Layout.vue';
 
-export default {
+import '@catppuccin/vitepress/theme/mocha/mauve.css';
+import './custom.sass';
+
+const theme: Theme = {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
+  Layout,
   enhanceApp({ app, router, siteData }) {
     // ...
-  }
-} satisfies Theme;
-
-export interface ThemeConfig extends DefaultThemeType.Config { 
-  giscus?: GiscusProps;
+  },
 };
+
+export default theme;
+
+export interface ThemeConfig extends DefaultThemeType.Config {
+  siteBase: string;
+  author: string;
+  license: string;
+  licenseLink: string;
+  // taglines: string[]
+  giscus: GiscusProps;
+}
+
+export interface Post extends ContentData {
+  id: string;
+  title: string;
+  description: string;
+  category?: string;
+  tags: string[];
+  create: number;
+}
