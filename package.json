@@ -8,6 +8,7 @@
     "@catppuccin/vitepress": "^0.1.2",
     "@giscus/vue": "^3.1.1",
     "@types/node": "^24.0.0",
+    "commander": "^14.0.0",
     "dayjs": "^1.11.13",
     "sass-embedded": "^1.89.2",
     "typescript": "^5.8.3",
