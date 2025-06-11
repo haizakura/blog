@@ -5,7 +5,8 @@ import { GiscusProps } from '@giscus/vue';
 import Layout from './Layout.vue';
 
 import '@catppuccin/vitepress/theme/frappe/sky.css';
-import './custom.sass';
+import './custom.scss';
+import 'virtual:uno.css';
 
 const theme: Theme = {
   extends: DefaultTheme,
