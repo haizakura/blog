@@ -23,6 +23,9 @@ export default defineConfigWithTheme<ThemeConfig>({
       dark: 'catppuccin-frappe',
     },
   },
+
+  ignoreDeadLinks: 'localhostLinks',
+
   themeConfig: {
     siteBase: 'https://nya.run',
     author: 'HAIZAKURA',
@@ -70,6 +73,13 @@ export default defineConfigWithTheme<ThemeConfig>({
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '..'),
+      },
+    },
+    css: {
+      preprocessorOptions: {
+        sass: {
+          api: 'modern-compiler',
+        },
       },
     },
   },
