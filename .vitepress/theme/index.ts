@@ -1,7 +1,8 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue';
-import type { Theme } from 'vitepress';
+import { DefaultTheme as DefaultThemeType, Theme, ContentData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
+import { GiscusProps } from '@giscus/vue';
 import './style.css';
 
 export default {
@@ -15,3 +16,7 @@ export default {
     // ...
   }
 } satisfies Theme;
+
+export interface ThemeConfig extends DefaultThemeType.Config { 
+  giscus?: GiscusProps;
+};
