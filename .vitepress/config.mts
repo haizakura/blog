@@ -16,6 +16,13 @@ export default defineConfigWithTheme<ThemeConfig>({
     ],
     ['script', { defer: '', src: '/_vercel/speed-insights/script.js' }],
   ],
+
+  markdown: {
+    theme: {
+      light: 'catppuccin-latte',
+      dark: 'catppuccin-frappe',
+    },
+  },
   themeConfig: {
     siteBase: 'https://nya.run',
     author: 'HAIZAKURA',

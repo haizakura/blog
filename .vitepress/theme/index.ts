@@ -4,7 +4,7 @@ import DefaultTheme from 'vitepress/theme';
 import { GiscusProps } from '@giscus/vue';
 import Layout from './Layout.vue';
 
-import '@catppuccin/vitepress/theme/mocha/mauve.css';
+import '@catppuccin/vitepress/theme/frappe/sky.css';
 import './custom.sass';
 
 const theme: Theme = {
