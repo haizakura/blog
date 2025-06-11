@@ -23,7 +23,7 @@ export interface ThemeConfig extends DefaultThemeType.Config {
   author: string;
   license: string;
   licenseLink: string;
-  // taglines: string[]
+  taglines: string[];
   giscus: GiscusProps;
 }
 

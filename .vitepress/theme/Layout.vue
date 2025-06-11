@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref, watch, onMounted, nextTick } from 'vue';
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import Giscus from '@giscus/vue';
@@ -40,6 +40,24 @@ import LicensingBlock from '@/components/LicensingBlock.vue';
 
 const { Layout } = DefaultTheme;
 const { page, theme, isDark } = useData<ThemeConfig>();
+
+onMounted(() => {
+  watch(
+    () => page.value.relativePath,
+    async () => {
+      // Wait for the next tick to make sure the component is mounted
+      await nextTick();
+
+      // Random tagline
+      const taglineElem = document.querySelector('.tagline');
+      if (taglineElem) {
+        taglineElem.innerHTML =
+          theme.value.taglines[Math.floor(Math.random() * theme.value.taglines.length)];
+      }
+    },
+    { immediate: true }
+  );
+});
 
 // Current post
 const currentPost = ref<Post | undefined>(undefined);

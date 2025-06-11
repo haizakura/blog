@@ -32,9 +32,21 @@ export default defineConfigWithTheme<ThemeConfig>({
     author: 'HAIZAKURA',
     license: 'CC BY-NC-SA 4.0',
     licenseLink: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
+    taglines: [
+      '<code>while (true) { eat() }</code>',
+      '<code>(() => &lt;moe&nbsp;/&gt;)()</code>',
+      '<code>nya.run()</code>',
+    ],
+
+    outline: {
+      label: '目录',
+      level: 'deep',
+    },
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '文章', link: '/posts' },
+      { text: '文章', link: '/posts/' },
+      { text: '关于', link: '/about/' },
       { text: 'Lab', link: 'https://lab.nya.run' },
     ],
 
