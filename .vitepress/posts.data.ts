@@ -24,3 +24,6 @@ export default {
       .sort((a, b) => b.create - a.create);
   },
 };
+
+declare const data: Post[];
+export { data };
