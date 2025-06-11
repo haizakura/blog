@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "module": "ESNext",
+    "target": "esnext",
     "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
