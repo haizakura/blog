@@ -1,5 +1,6 @@
 import path from 'path';
 import { defineConfigWithTheme } from 'vitepress';
+import UnoCSS from 'unocss/vite';
 import { ThemeConfig } from './theme';
 
 // https://vitepress.dev/reference/site-config
@@ -22,7 +23,6 @@ export default defineConfigWithTheme<ThemeConfig>({
       light: 'catppuccin-latte',
       dark: 'catppuccin-frappe',
     },
-    math: true,
   },
 
   ignoreDeadLinks: 'localhostLinks',
@@ -34,19 +34,8 @@ export default defineConfigWithTheme<ThemeConfig>({
     licenseLink: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: '文章', link: '/posts' },
       { text: 'Lab', link: 'https://lab.nya.run' },
-    ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-        ],
-      },
     ],
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/HAIZAKURA' }],
@@ -71,6 +60,7 @@ export default defineConfigWithTheme<ThemeConfig>({
     },
   },
   vite: {
+    plugins: [UnoCSS()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '..'),
@@ -78,7 +68,7 @@ export default defineConfigWithTheme<ThemeConfig>({
     },
     css: {
       preprocessorOptions: {
-        sass: {
+        scss: {
           api: 'modern-compiler',
         },
       },
