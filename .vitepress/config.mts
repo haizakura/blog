@@ -22,6 +22,7 @@ export default defineConfigWithTheme<ThemeConfig>({
       light: 'catppuccin-latte',
       dark: 'catppuccin-frappe',
     },
+    math: true,
   },
 
   ignoreDeadLinks: 'localhostLinks',
