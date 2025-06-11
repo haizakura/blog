@@ -1,0 +1,15 @@
+{
+  "style": "default",
+  "typescript": true,
+  "framework": "vite",
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "src/assets/index.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/utils/shadcn"
+  }
+}

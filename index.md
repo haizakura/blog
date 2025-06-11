@@ -1,25 +1,25 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+title: '首页'
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: '灰桜 | 札記'
+  text: 'A VitePress Site'
+  tagline: Now built with VitePress!
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 文章
+      link: /posts/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 关于
+      link: /about/
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
----
-
+# features:
+#   - title: Feature A
+#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+#   - title: Feature B
+#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+#   - title: Feature C
+#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+# ---

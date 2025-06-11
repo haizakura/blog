@@ -1,17 +1,37 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue';
-import type { Theme } from 'vitepress';
+import { DefaultTheme as DefaultThemeType, Theme, ContentData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
-import './style.css';
+import { GiscusProps } from '@giscus/vue';
+import Layout from './Layout.vue';
 
-export default {
+import '@catppuccin/vitepress/theme/frappe/sky.css';
+import './custom.scss';
+import 'virtual:uno.css';
+
+const theme: Theme = {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
+  Layout,
   enhanceApp({ app, router, siteData }) {
     // ...
-  }
-} satisfies Theme;
+  },
+};
+
+export default theme;
+
+export interface ThemeConfig extends DefaultThemeType.Config {
+  siteBase: string;
+  author: string;
+  license: string;
+  licenseLink: string;
+  taglines: string[];
+  giscus: GiscusProps;
+}
+
+export interface Post extends ContentData {
+  id: string;
+  title: string;
+  description: string;
+  category?: string;
+  tags: string[];
+  create: number;
+}
