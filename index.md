@@ -1,15 +1,19 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+title: '首页'
 
 hero:
-  name: 'My Awesome Project'
+  name: '灰桜 | 札記'
   text: 'A VitePress Site'
   tagline: Now built with VitePress!
   actions:
     - theme: brand
       text: 文章
       link: /posts/
+    - theme: alt
+      text: 关于
+      link: /about/
 
 # features:
 #   - title: Feature A
