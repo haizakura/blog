@@ -7,9 +7,9 @@ export default {
   ...loader,
   /**
    * 异步加载文章数据
-   * 
+   *
    * 从数据源加载文章信息 解析和处理返回一个按创建时间降序排列的文章数组
-   * 
+   *
    * @returns {Promise<Post[]>} 返回一个Promise，解析为Post对象的数组
    */
   async load(): Promise<Post[]> {
