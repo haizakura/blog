@@ -66,7 +66,7 @@ export default defineConfigWithTheme<ThemeConfig>({
         async _render(src, env, md) {
           const html = md.render(src, env);
           if (env.frontmatter?.title) {
-            return md.render(`${env.frontmatter.title} ${html}}`);
+            return md.render(`# ${env.frontmatter.title}`) + html;
           }
           return html;
         },
