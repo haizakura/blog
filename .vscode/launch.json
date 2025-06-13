@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node-terminal",
+      "name": "Run Dev",
+      "request": "launch",
+      "command": "pnpm run docs:dev",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "node-terminal",
+      "name": "Run Preview",
+      "request": "launch",
+      "command": "pnpm run docs:preview",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "node-terminal",
+      "name": "Build",
+      "request": "launch",
+      "command": "pnpm run docs:build",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
