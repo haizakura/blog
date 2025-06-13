@@ -5,8 +5,11 @@ title: '首页'
 
 hero:
   name: '灰桜 札記'
-  text: 'A VitePress Site'
+  text: '咸鱼梦想失去ing...'
   tagline: Now built with VitePress!
+  image:
+    src: https://avatars.githubusercontent.com/u/44568043
+    alt: Avatar
   actions:
     - theme: brand
       text: 文章
