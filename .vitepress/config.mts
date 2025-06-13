@@ -36,6 +36,8 @@ export default defineConfigWithTheme<ThemeConfig>({
       '<code>while (true) { eat() }</code>',
       '<code>(() => &lt;moe&nbsp;/&gt;)()</code>',
       '<code>nya.run()</code>',
+      '<code>[moe.things]::haizakura</code>',
+      '发生甚么事了？',
     ],
 
     outline: {
@@ -106,7 +108,7 @@ export default defineConfigWithTheme<ThemeConfig>({
 
     footer: {
       copyright:
-        'Copyright © 2017-2025 HAIZAKURA | <a href="https://github.com/HAIZAKURA/blog" target="_blank">GitHub</a>',
+        'Copyright © 2017-2025 HAIZAKURA | <a href="https://github.com/HAIZAKURA/blog" target="_blank">GitHub</a><br /><a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备20009930号</a>',
     },
   },
   vite: {
