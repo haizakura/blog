@@ -4,7 +4,7 @@ layout: home
 title: '首页'
 
 hero:
-  name: '灰桜 | 札記'
+  name: '灰桜 札記'
   text: 'A VitePress Site'
   tagline: Now built with VitePress!
   actions:

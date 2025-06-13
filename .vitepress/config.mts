@@ -5,8 +5,8 @@ import { ThemeConfig } from './theme';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfigWithTheme<ThemeConfig>({
-  title: '灰桜 | 札記',
-  description: '灰桜 | 札記 - Powered by VitePress',
+  title: '灰桜 札記',
+  description: '灰桜 札記 - Powered by VitePress',
   lang: 'zh-CN',
   head: [
     // inject Vercel Speed Insights
