@@ -5,8 +5,8 @@ import { ThemeConfig } from './theme';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfigWithTheme<ThemeConfig>({
-  title: '灰桜 | 札記',
-  description: '灰桜 | 札記 - Powered by VitePress',
+  title: '灰桜 札記',
+  description: '灰桜 札記 - Powered by VitePress',
   lang: 'zh-CN',
   head: [
     // inject Vercel Speed Insights
@@ -51,6 +51,44 @@ export default defineConfigWithTheme<ThemeConfig>({
     ],
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/HAIZAKURA' }],
+
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true,
+        /**
+         * @param {string} src
+         * @param {import('vitepress').MarkdownEnv} env
+         * @param {import('markdown-it-async')} md
+         *
+         * @returns {Promise<string>}
+         */
+        async _render(src, env, md) {
+          const html = md.render(src, env);
+          if (env.frontmatter?.title) {
+            return md.render(`# ${env.frontmatter.title}`) + html;
+          }
+          return html;
+        },
+        translations: {
+          button: {
+            buttonText: '搜索',
+            buttonAriaLabel: '搜索',
+          },
+          modal: {
+            displayDetails: '显示详细列表',
+            backButtonTitle: '关闭搜索',
+            noResultsText: '无法找到相关文章',
+            resetButtonTitle: '清除查询条件',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭',
+            },
+          },
+        },
+      },
+    },
 
     giscus: {
       repo: 'HAIZAKURA/blog',
