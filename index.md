@@ -1,11 +1,10 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-title: '首页'
 
 hero:
   name: '灰桜 札記'
-  text: '咸鱼梦想失去ing...'
+  text: 'START : DASH !'
   tagline: Now built with VitePress!
   image:
     src: https://avatars.githubusercontent.com/u/44568043
