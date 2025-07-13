@@ -1,18 +1,24 @@
 {
   "compilerOptions": {
+    "lib": ["DOM", "ESNext"],
+    "target": "ES2020",
+
+    /* base */
     "baseUrl": ".",
-    "module": "ESNext",
-    "target": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "esModuleInterop": true,
-    "noUnusedLocals": true,
-    "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+
+    /* module */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+
+    /* type checking */
+    "strict": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }

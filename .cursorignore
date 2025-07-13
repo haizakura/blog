@@ -1,0 +1,9 @@
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+
+# macOS
+.DS_Store
+
+# VitePress
+.vitepress/cache/
+.vitepress/dist/
+.vitepress/.temp/
