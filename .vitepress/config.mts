@@ -92,7 +92,7 @@ export default defineConfigWithTheme<ThemeConfig>({
     },
 
     giscus: {
-      repo: 'HAIZAKURA/blog',
+      repo: 'haizakura/blog',
       repoId: 'R_kgDOO3j7eA',
       category: 'Comments',
       categoryId: 'DIC_kwDOO3j7eM4CrVOy',
