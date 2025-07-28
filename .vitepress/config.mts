@@ -9,9 +9,6 @@ export default defineConfigWithTheme<ThemeConfig>({
   description: '灰桜 札記 - Powered by VitePress',
   lang: 'zh-CN',
   head: [
-    // Vercel Speed Insights
-    ['script', {}, `window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };`],
-    ['script', { defer: '', src: '/_vercel/speed-insights/script.js' }],
     // Vercel Web Analytics
     ['script', {}, `window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };`],
     ['script', { defer: '', src: '/_vercel/insights/script.js' }],
