@@ -49,7 +49,11 @@ export default defineConfigWithTheme<ThemeConfig>({
       { text: 'Lab', link: 'https://lab.nya.run' },
     ],
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/HAIZAKURA' }],
+    socialLinks: [
+      { icon: 'sinaweibo', link: 'https://weibo.com/u/1659426257', ariaLabel: 'Sina Weibo' },
+      { icon: 'x', link: 'https://x.com/haizakura_0v0', ariaLabel: 'X' },
+      { icon: 'github', link: 'https://github.com/haizakura', ariaLabel: 'GitHub' },
+    ],
 
     search: {
       provider: 'local',
