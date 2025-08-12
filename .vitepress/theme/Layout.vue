@@ -71,16 +71,3 @@ watch(
   { immediate: true }
 );
 </script>
-
-<style lang="scss">
-.post-header {
-  margin-bottom: 64px;
-}
-
-.post-title {
-  font-weight: 600;
-  outline: none;
-  line-height: 40px;
-  font-size: 32px;
-}
-</style>
