@@ -1,0 +1,13 @@
+# markdown
+*.md
+
+# vitepress
+.vitepress/cache/
+.vitepress/temp/
+.vitepress/dist/
+
+# node
+node_modules/
+
+# pnpm
+pnpm-lock.yaml
