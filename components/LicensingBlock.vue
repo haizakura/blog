@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="copyright-block vp-doc relative bg-bg-soft rounded-lg pa-4 overflow-hidden"
-    :key="page.relativePath"
-  >
+  <div class="copyright-block vp-doc relative bg-bg-soft rounded-lg pa-4 overflow-hidden" :key="page.relativePath">
     <div class="relative z-1">
       <div class="font-bold">{{ page.title }}</div>
       <a class="text-sm z-20" :href="pageLink">{{ pageLink }}</a>

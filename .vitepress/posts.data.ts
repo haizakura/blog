@@ -22,9 +22,7 @@ export default {
           title: content.frontmatter.title,
           description: content.frontmatter.description,
           tags: content.frontmatter.tags ?? [],
-          create: content.frontmatter.create
-            ? new Date(content.frontmatter.create).getTime()
-            : Date.now(),
+          create: content.frontmatter.create ? new Date(content.frontmatter.create).getTime() : Date.now(),
         };
         return post;
       })
